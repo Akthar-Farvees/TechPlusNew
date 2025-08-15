@@ -5,14 +5,27 @@
       "src": "index.ts",
       "use": "@vercel/node",
       "config": {
-        "tsconfig": "tsconfig.json"
+        "tsconfig": "tsconfig.json",
+        "includeFiles": ["**"]
       }
     }
   ],
   "routes": [
     {
+      "src": "/api/(.*)",
+      "dest": "index.ts"
+    },
+    {
       "src": "/(.*)",
       "dest": "index.ts"
     }
-  ]
+  ],
+    "env": {
+    "NODE_ENV": "production"
+  },
+    "functions": {
+    "index.ts": {
+      "maxDuration": 30
+    }
+  }
 }

@@ -6,7 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon --watch './**/*.ts' --ext ts,json --exec tsx index.ts",
-    "start": "node dist/index.js"
+    "start": "node index.js",
+    "build": "tsc",
+    "vercel-build": "echo 'No build step required'"
   },
   "keywords": [],
   "author": "",
