@@ -1,0 +1,17 @@
+{
+ "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["server", "shared", "services", "types", "db.ts", "googleAuth.ts", "index.ts", "replitAuth.ts", "route.ts", "storage.ts", "vite.ts", "routes"],
+  "exclude": ["node_modules", "dist"]
+}
